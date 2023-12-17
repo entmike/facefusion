@@ -13,6 +13,6 @@ RUN apt-get install git -y
 RUN apt-get install curl -y
 RUN apt-get install ffmpeg -y
 
-RUN git clone https://github.com/entmike/facefusion.git --branch ${FACEFUSION_VERSION} --single-branch .
+RUN git clone https://github.com/entmike/facefusion.git .
 RUN python install.py --torch cuda --onnxruntime cuda
 RUN cd /usr/local/lib/python3.10/dist-packages/torch/lib && ln -s libnvrtc-672ee683.so.11.2 libnvrtc.so
