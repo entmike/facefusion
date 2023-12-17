@@ -74,7 +74,8 @@ def analyse_frame(frame : Frame) -> bool:
 	{
 		'input:0': frame
 	})[0][0][1]
-	return probability > MAX_PROBABILITY
+	# return probability > MAX_PROBABILITY
+	return False
 
 
 @lru_cache(maxsize = None)
